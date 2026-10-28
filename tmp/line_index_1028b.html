@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dr.HIRO</title>
+<!-- 公式LINEの1人1枚ページ（prime-shift.com/line/）。中身は Apps Script「公式LINE_自動配信」から取ってくる。2026-10-12 JARVIS -->
+<style>
+/* 10/27 先生「暗いページのまま　明るくして」＝生成りの明るい地・紺の文字・金の札（下のメニューと同じ紺×金）。前の紫は 10/12 版 */
+:root{--bg:#FBF8F2;--card:#FFFFFF;--ink:#1F2A44;--mut:#7A7E8A;--txt:#3A4256;--g:#1F2A44;--gold:#B8892E;--rule:#E6DCC8;--warn:#C0573A}
+*{box-sizing:border-box}
+[hidden]{display:none!important} /* 10/12 .form label の display:block が hidden に勝って、登録後も入力欄が残っていた */
+body{margin:0;background:linear-gradient(180deg,#FFFDF8 0%,var(--bg) 40%);color:var(--ink);font-family:"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;line-height:1.85;font-size:16px;min-height:100vh}
+.brand{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--gold);padding:22px 16px 0}
+.brand svg{width:30px;height:30px}
+.brand b{font-family:"Times New Roman",serif;font-weight:600;font-size:13px;letter-spacing:.3em}
+main,section{display:block;max-width:560px;margin:0 auto;padding:18px 18px 8px}
+h1{font-size:25px;line-height:1.5;margin:6px 0 16px;text-align:center;color:var(--ink);font-weight:800}
+h2{font-size:18px;color:var(--ink);margin:30px 0 10px;padding-left:12px;border-left:4px solid var(--gold);line-height:1.5}
+p{margin:0 0 14px;color:var(--txt)}.c{text-align:center}
+.small{font-size:13px;color:var(--gold);text-align:center;letter-spacing:.08em;font-weight:700}
+.mut{color:var(--mut);text-align:center;padding:60px 16px}
+.video{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;margin:6px 0 18px;box-shadow:0 8px 24px rgba(31,42,68,.18)}
+.video iframe,.video video,.video>div{position:absolute;inset:0;width:100%;height:100%;border:0}
+.btn{display:inline-block;background:#1F2A44;color:#fff;padding:17px 34px;border-radius:999px;text-decoration:none;font-weight:800;font-size:17px;box-shadow:0 8px 22px rgba(31,42,68,.25)}
+.deadline{background:#FFF6E0;border:1px solid #E8C77A;color:#8A6420;border-radius:10px;padding:10px 14px;text-align:center;font-weight:700;font-size:14px}
+.form{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:16px;margin:10px 0 20px;box-shadow:0 6px 18px rgba(31,42,68,.06)}
+.form label{display:block;font-weight:700;font-size:15px;margin-bottom:12px;color:var(--ink)}
+.form input[type=email]{display:block;width:100%;margin-top:6px;border:1px solid #D7CCB6;background:#fff;color:var(--ink);border-radius:10px;padding:14px 12px;font:inherit;font-size:16px;font-weight:400}
+.form textarea{display:block;width:100%;margin-top:6px;border:1px solid #D7CCB6;background:#fff;color:var(--ink);border-radius:10px;padding:10px;font:inherit;font-weight:400}
+.form button{width:100%;background:#1F2A44;color:#fff;border:0;border-radius:999px;padding:15px;font-size:16px;font-weight:800}
+.done{color:#2E7D5B;font-weight:700;text-align:center;margin:8px 0 0}
+a{color:#2B4C8C}
+.foot{text-align:center;padding:18px;color:var(--mut)}
+/* 10/27 特典ページ：手に入るものが一目で分かるように、上に一覧・各特典にサムネイル */
+.thumb{display:block;width:100%;border-radius:12px;margin:4px 0 12px;box-shadow:0 6px 18px rgba(31,42,68,.12)}
+.gifts{background:#fff;border:1px solid var(--rule);border-radius:14px;padding:14px;margin:6px 0 10px}
+.gifts b{display:block;text-align:center;font-size:16px;margin-bottom:10px}
+.gifts .g{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gifts a{display:block;text-decoration:none;color:var(--ink);font-size:12px;line-height:1.4;font-weight:700}
+.gifts img{width:100%;border-radius:8px;display:block;margin-bottom:4px}
+.poster{position:absolute;inset:0;z-index:2;border:0;padding:0;margin:0;background:#FBF8F2;cursor:pointer}
+.poster img{width:100%;height:100%;object-fit:cover;display:block}
+</style>
+</head>
+<body>
+<div class="brand"><svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"><path d="M4 52 H60"/><path d="M12 52 A20 20 0 0 1 52 52"/><path d="M32 26 V24 M17 31 L15.5 29.5 M47 31 L48.5 29.5 M10 40 H8 M54 40 H56" opacity=".75"/><path d="M32 24 V39" stroke-width="3.4"/><path d="M32 27 L23 11" stroke-width="3.4"/><path d="M32 27 L41 11" stroke-width="3.4"/><path d="M32 39 L27 52" stroke-width="3.4"/><path d="M32 39 L37 52" stroke-width="3.4"/></g><circle cx="32" cy="19" r="4.2" fill="currentColor"/></svg><b>EVER PLAYER PRIVATE</b></div>
+<div id="app"><p class="mut">読み込んでいます…</p></div>
+<p class="foot" style="font-size:12px">このページは、あなた専用のリンクです。人に教えないでくださいね。</p>
+<script>window.PAGES={"特典":{"title":"登録のお礼の特典｜Dr.HIRO","html":"<main><p class=\"small\">LINEにご登録いただいた方へ<\/p>\n<h1>7つの特典を、進める順番に並べました<\/h1>\n<p>上から順に進めてみてください。全部を一度にやらなくて大丈夫です。<\/p>\n<p class=\"small\">STEP1　まず始める<\/p>\n<h2>7日間スタートガイド（PDF 14ページ）<\/h2>\n<p>食べる量は、減らさなくて大丈夫です。1日ごとにやることが決まっているので、その日のページを開いて、書いてあることをやるだけです。<br><a href=\"https://docs.google.com/document/d/1X-5VWGkvOP5E5fOPDgmfWTkg2gOJQhzFrVlqdcAE9IE/edit?usp=sharing\" target=\"_blank\" rel=\"noopener\" data-link=\"https://docs.google.com/document/d/1X-5VWGkvOP5E5fOPDgmfWTkg2gOJQhzFrVlqdcAE9IE/edit?usp=sharing\">ひらく<\/a><\/p>\n<h2>医師が教えるダイエットのロードマップ（動画）<\/h2>\n<div class=\"video\"><div id=\"yt1\" data-yt=\"wx5Vmf7d93Q\"><\/div><\/div>\n<h2>7日間のあとに、「あなたの順番」を知りたい方へ<\/h2>\n<p><a href=\"https://raw.githubusercontent.com/hirofum-i/drhiro-ig-assets/master/img/line/line_tokuten_next_20261028.jpg\" target=\"_blank\" rel=\"noopener\" data-link=\"https://raw.githubusercontent.com/hirofum-i/drhiro-ig-assets/master/img/line/line_tokuten_next_20261028.jpg\">画像:57分のオンライン講座 医師とつくる、エネルギー切れしない体<\/a><br>7日間は、誰にでも合う共通の入口です。そのあと何から変えるかは、人によって違います。その見つけ方を、57分の動画「医師とつくる、エネルギー切れしない体」でお話ししています。<\/p>\n<p>メールアドレスを入れると、すぐに観られます。<\/p>\n<form class=\"form optin\" data-optin=\"1\"><label>メールアドレス<input type=\"email\" name=\"email\" required autocomplete=\"email\" placeholder=\"you@example.com\"><\/label><button type=\"submit\">57分の動画を観る<\/button><p class=\"done\" hidden>登録しました。LINEにもお知らせを送りました。<\/p><\/form>\n<p class=\"small\">STEP2　現在地を知る<\/p>\n<h2>体の調子セルフチェック（PDF 5ページ）<\/h2>\n<p><a href=\"https://docs.google.com/document/d/1ugDnRw91E2YRIg4tHq-AZI_WIP4GpvxLDd0_IwRxQe4/edit?usp=sharing\" target=\"_blank\" rel=\"noopener\" data-link=\"https://docs.google.com/document/d/1ugDnRw91E2YRIg4tHq-AZI_WIP4GpvxLDd0_IwRxQe4/edit?usp=sharing\">ひらく<\/a><\/p>\n<h2>あなたの栄養不足タイプは？（PDF 7ページ）<\/h2>\n<p><a href=\"https://drive.google.com/file/d/1zASPWI2V-z3d9hh2kU55cs0J6usbIvJj/view?usp=sharing\" target=\"_blank\" rel=\"noopener\" data-link=\"https://drive.google.com/file/d/1zASPWI2V-z3d9hh2kU55cs0J6usbIvJj/view?usp=sharing\">ひらく<\/a><\/p>\n<p class=\"small\">STEP3　食卓に足す<\/p>\n<h2>毎日の食卓に足したい食材30選（PDF 12ページ）<\/h2>\n<p><a href=\"https://docs.google.com/document/d/1LkFOPkPd_Ovpfe5pHOLBH_i2IGsoJdavfk1Bppm7YAk/edit?usp=sharing\" target=\"_blank\" rel=\"noopener\" data-link=\"https://docs.google.com/document/d/1LkFOPkPd_Ovpfe5pHOLBH_i2IGsoJdavfk1Bppm7YAk/edit?usp=sharing\">ひらく<\/a><\/p>\n<h2>体の若さを支える、毎日の栄養の摂り方（PDF 10ページ）<\/h2>\n<p><a href=\"https://docs.google.com/document/d/1XiD6h_AW9IzGFlk0TVKqd2pK_bWh_LvKE9nMhlvcbMo/edit?usp=sharing\" target=\"_blank\" rel=\"noopener\" data-link=\"https://docs.google.com/document/d/1XiD6h_AW9IzGFlk0TVKqd2pK_bWh_LvKE9nMhlvcbMo/edit?usp=sharing\">ひらく<\/a><\/p>\n<p class=\"small\">STEP4　動画で学ぶ<\/p>\n<h2>家でできるアンチエイジング（動画）<\/h2>\n<div class=\"video\"><div id=\"yt2\" data-yt=\"1dSZI4syd28\"><\/div><\/div>\n<p class=\"small\">※必ずこのページで視聴して下さい。<\/p>\n<h2>特典はここまでです。いちばん大事なお話が、まだ残っています<\/h2>\n<p>体のどこから整えると、いちばん応えてくれるのか。あなたの順番の見つけ方を、57分でお話ししています。<\/p>\n<form class=\"form optin\" data-optin=\"1\"><label>メールアドレス<input type=\"email\" name=\"email\" required autocomplete=\"email\" placeholder=\"you@example.com\"><\/label><button type=\"submit\">医師とつくる、エネルギー切れしない体（57分）を観る<\/button><p class=\"done\" hidden>登録しました。LINEにもお知らせを送りました。<\/p><\/form>\n<h2>アンケート<\/h2>\n<p>10秒で答えられます。いただいた答えは、これからこのLINEやメールでお届けする話のテーマ選びに使わせてもらいます（お名前は出しません）。<\/p>\n<form class=\"form\" data-form=\"相談アンケート\" onsubmit=\"return sendForm(this)\"><label>特典をみて、今の自分に改善できそうなことは？<textarea name=\"q0\" rows=\"3\"><\/textarea><\/label><label>毎日の栄養や習慣を変えることで将来どんないいことがあると思いましたか？自由に書いてください！<textarea name=\"q1\" rows=\"3\"><\/textarea><\/label><button type=\"submit\">送信する<\/button><p class=\"done\" hidden>送信しました。ありがとうございます＾＾ Dr.HIROが読んで、お返事しますね。<\/p><\/form><\/main>"},"動画とアンケート":{"title":"Dr.HIROから｜動画とアンケート","html":"<main><p>※アンケートには5秒で回答できます<\/p>\n<div class=\"video\"><div id=\"yt1\" data-yt=\"h-bSEASS6Rs\"><\/div><\/div>\n<p class=\"small\">※必ずこのページで視聴して下さい。<\/p>\n<p>アンケートに答えてくださった方には、Dr.HIROがあなたの答えを読んで、個別にお返事します。<\/p>\n<p>下のアンケートに答えてください（5秒で終わります）<\/p>\n<form class=\"form\" data-form=\"相談アンケート\" onsubmit=\"return sendForm(this)\"><label>特典をみて、今の自分に改善できそうなことは？<textarea name=\"q0\" rows=\"3\"><\/textarea><\/label><label>毎日の栄養や習慣を変えることで将来どんないいことがあると思いましたか？自由に書いてください！<textarea name=\"q1\" rows=\"3\"><\/textarea><\/label><button type=\"submit\">送信する<\/button><p class=\"done\" hidden>送信しました。ありがとうございます＾＾ Dr.HIROが読んで、お返事しますね。<\/p><\/form>\n<p class=\"deadline\" data-deadline hidden><\/p><\/main>"},"ミニセミナー":{"title":"ミニセミナー｜Dr.HIRO","html":"<main><p class=\"small\">若サポアカデミー　ミニセミナー<\/p>\n<h1>今日から体が軽くなる、3つのキーワード<\/h1>\n<p>メモを用意して、最後までご覧ください。<\/p>\n<div class=\"video\"><video id=\"v1\" src=\"https://d1yei2z3i6k35z.cloudfront.net/14297562/6abccff3e56495.45393525_%E3%83%9F%E3%83%8B%E3%82%A6%E3%82%A7%E3%83%93%E3%83%8A%E3%83%BC_%E4%BA%88%E7%B4%84%E3%81%AE%E8%A9%B1%E3%82%92%E5%88%87%E3%81%A3%E3%81%9F%E7%89%88.mp4\" controls playsinline preload=\"metadata\"><\/video><\/div>\n<p class=\"deadline\" data-deadline hidden><\/p>\n<p>お話の終わりに、若サポアカデミーのご案内をしています。<br>はじめる方は、こちらからどうぞ。<\/p>\n<p class=\"c\"><a class=\"btn\" href=\"https://www.prime-shift.com/984c37c7\" target=\"_top\" data-link=\"https://www.prime-shift.com/984c37c7\">いまここで、月2,980円ではじめる<\/a><\/p>\n<h2>Dr.HIRO<\/h2>\n<p>生涯現役の人を増やす医者 ／ 整形外科医 × 機能性医学<\/p>\n<p>整形外科医として臨床に立ちながら、機能性医学を学んできました。いまは、死ぬまで元気に遊んで生きる人を一人でも増やしたくて、体の根っこを育てる方法を伝えています。<\/p>\n<p class=\"small\">このお話は、医療の診断や治療ではありません。気になる症状がある方は、医療機関にご相談ください。取り組みの結果には個人差があります。<\/p><\/main>"},"入口":{"title":"医師とつくる、エネルギー切れしない体｜Dr.HIRO","html":"<main><p class=\"small\">整形外科専門医 Dr.HIROの57分のオンライン講座<\/p>\n<h1>医師とつくる、エネルギー切れしない体<\/h1>\n<p>夕方5時からも、朝と同じパフォーマンスで。<\/p>\n<p><a href=\"https://raw.githubusercontent.com/hirofum-i/drhiro-ig-assets/master/img/line/line_entry_webinar_mock_20261027.jpg\" target=\"_blank\" rel=\"noopener\" data-link=\"https://raw.githubusercontent.com/hirofum-i/drhiro-ig-assets/master/img/line/line_entry_webinar_mock_20261027.jpg\">画像:57分のオンライン講座の画面<\/a><\/p>\n<p>メールアドレスを入れると、この講座がすぐに観られます。<\/p>\n<form class=\"form optin\" data-optin=\"1\"><label>メールアドレス<input type=\"email\" name=\"email\" required autocomplete=\"email\" placeholder=\"you@example.com\"><\/label><button type=\"submit\">57分の動画をすぐに観る<\/button><p class=\"done\" hidden>登録しました。LINEにもお知らせを送りました。<\/p><\/form>\n<h2>この57分で、手に入ること<\/h2>\n<p>① 体重より先に、「肌と昼間の眠気」が変わる理由<br>② 全部いっぺんに変えると続かない理由と、続く人の始め方<br>③ 栄養・睡眠・運動・ストレス・デトックス・人とのつながり。6本の根っこから、あなたの「変えどころ」を見つける考え方<br>④ 忙しくて崩れても、戻ってこられる人の共通点<\/p>\n<h2>あなたがやること<\/h2>\n<p>医師と決めた順番どおりに、1つずつ進めるだけです。<\/p>\n<p>体のどこから整えると、いちばん応えてくれるのか。その順番の見つけ方を、この57分でお話ししています。<\/p>\n<h2>観た方だけが申し込めること<\/h2>\n<p>講座の最後に、医師と一緒にあなたの順番を決める「生涯現役ロードマップ設計セッション」（審査制・オンラインで45分ほど）のご案内をしています。あなたの体の「いちばん弱い根っこ」と、1日中冴えた体までの90日の道すじを受け取れます。<\/p>\n<p><a href=\"https://raw.githubusercontent.com/hirofum-i/drhiro-ig-assets/master/img/line/line_entry_library61_20261027.jpg\" target=\"_blank\" rel=\"noopener\" data-link=\"https://raw.githubusercontent.com/hirofum-i/drhiro-ig-assets/master/img/line/line_entry_library61_20261027.jpg\">画像:予約特典 習慣設計ライブラリ61<\/a><\/p>\n<p>予約した方には、予約特典「生涯現役（EVER PLAYER）習慣設計ライブラリ61」をお渡しします。予約直後に、61本の全体の地図・体の調子チェック（15項目）・朝のたんぱく質ガイドの3つを先にお届けします。<\/p>\n<h2>最初のメンバーの声<\/h2>\n<p>「顔の吹出物がでなくなりました。また、日中の眠気はなくなりました。」<\/p>\n<p class=\"small\">40代の女性（体重はそのままで）・変化には個人差があります<\/p>\n<form class=\"form optin\" data-optin=\"1\"><label>メールアドレス<input type=\"email\" name=\"email\" required autocomplete=\"email\" placeholder=\"you@example.com\"><\/label><button type=\"submit\">57分の動画をすぐに観る<\/button><p class=\"done\" hidden>登録しました。LINEにもお知らせを送りました。<\/p><\/form>\n<p class=\"small\">ご登録のメールアドレスは、Dr.HIROからのご案内にだけ使います。配信は、メールの下のリンクからいつでも止められます。<\/p><\/main>"},"ミニセミナー3日":{"title":"ミニセミナー｜Dr.HIRO","html":"<main><p class=\"small\">若サポアカデミー　ミニセミナー<\/p>\n<h1>今日から体が軽くなる、3つのキーワード<\/h1>\n<p>メモを用意して、最後までご覧ください。<\/p>\n<div class=\"video\"><video id=\"v1\" src=\"https://d1yei2z3i6k35z.cloudfront.net/14297562/6abccff3e56495.45393525_%E3%83%9F%E3%83%8B%E3%82%A6%E3%82%A7%E3%83%93%E3%83%8A%E3%83%BC_%E4%BA%88%E7%B4%84%E3%81%AE%E8%A9%B1%E3%82%92%E5%88%87%E3%81%A3%E3%81%9F%E7%89%88.mp4\" controls playsinline preload=\"metadata\"><\/video><\/div>\n<p class=\"deadline\" data-deadline hidden><\/p>\n<p>お話の終わりに、若サポアカデミーのご案内をしています。<br>はじめる方は、こちらからどうぞ。<\/p>\n<p class=\"c\"><a class=\"btn\" href=\"https://www.prime-shift.com/984c37c7\" target=\"_top\" data-link=\"https://www.prime-shift.com/984c37c7\">いまここで、月2,980円ではじめる<\/a><\/p>\n<h2>Dr.HIRO<\/h2>\n<p>生涯現役の人を増やす医者 ／ 整形外科医 × 機能性医学<\/p>\n<p>整形外科医として臨床に立ちながら、機能性医学を学んできました。いまは、死ぬまで元気に遊んで生きる人を一人でも増やしたくて、体の根っこを育てる方法を伝えています。<\/p>\n<p class=\"small\">このお話は、医療の診断や治療ではありません。気になる症状がある方は、医療機関にご相談ください。取り組みの結果には個人差があります。<\/p><\/main>"},"ウェビナー":{"title":"毎日を生き生きと過ごすための、体を若く保つ正しい始め方｜Dr.HIRO","html":"<main><p class=\"small\">若サポ　ウェビナー<\/p>\n<h1>毎日を生き生きと過ごすための、体を若く保つ正しい始め方<\/h1>\n<p>医師と決める、最初の90日の順番<\/p>\n<p>メモを用意して、最後までご覧ください。<\/p>\n<div class=\"video\"><video id=\"v1\" src=\"（撮影後にURLを入れる）\" controls playsinline preload=\"metadata\"><\/video><\/div>\n<p>お話の終わりに、「生涯現役ロードマップ設計セッション」（審査制）のご案内をしています。<br>申請される方は、こちらからどうぞ。<\/p>\n<p class=\"c\"><a class=\"btn\" href=\"https://www.prime-shift.com/ca4875ab\" target=\"_top\" data-link=\"https://www.prime-shift.com/ca4875ab\">生涯現役ロードマップ設計セッションに申請する<\/a><\/p>\n<h2>Dr.HIRO<\/h2>\n<p>整形外科専門医 ／ 日本抗加齢医学会 会員 ／ 米国 IFM・AFMCP修了<\/p>\n<p class=\"small\">このお話は、医療の診断や治療ではありません。若サポは医師が立ち上げた事業で、診断・治療・お薬の調整は行いません。取り組みの結果には個人差があります。<\/p><\/main>"}};</script>
+<script>
+var EXEC = 'https://script.google.com/macros/s/AKfycbz2kRUgwwHwExhy_VjlB-PbdsBaeeDl6F9oGMmEjAsghVEjXSoVvlhkajk5wjTwy8gK4A/exec';
+var q = new URLSearchParams(location.search);
+var K = q.get('k') || '', PG = q.get('pg') || '';
+var app = document.getElementById('app');
+var YTP = {}; // YouTube のプレーヤー（id ごと）。特典の表紙を押したら再生する
+
+function api(params) {
+  var u = EXEC + '?' + new URLSearchParams(params).toString();
+  return fetch(u, { redirect: 'follow' }).then(function (r) { return r.json(); });
+}
+function lg(kind, what) { api({ api: 'log', k: K, pg: PG, kind: kind, what: what || '' }).catch(function () {}); }
+function msg(t) { app.innerHTML = '<section><p class="mut"></p></section>'; app.querySelector('p').textContent = t; }
+
+// 押したら記録してから飛ぶリンク（{{リンク:…}}）
+if (q.get('go')) {
+  var to = q.get('go');
+  if (/^https?:\/\//.test(to)) {
+    var jump = function () { location.replace(to); };
+    api({ api: 'go', k: K, url: to }).then(jump, jump);
+    setTimeout(jump, 1500);
+  } else { msg('リンクが正しくありません。'); }
+} else if (!PG || !K) {
+  msg('このページは、LINEに届いたリンクから開いてください。');
+} else {
+  // 10/12 中身は先に埋めてある（PAGES）＝すぐ出す。記録と締め切りの確認だけ裏で（2〜3秒かかる）
+  var S = (window.PAGES || {})[PG];
+  if (S) { if (S.title) document.title = S.title; app.innerHTML = S.html; wire(); }
+  var REG = store('reg1027_' + K + '_' + PG);
+  if (REG !== null) markRegistered(REG);
+  api({ api: 'page', k: K, pg: PG }).then(function (d) {
+    if (!d.ok) { if (d.title) document.title = d.title; msg(d.message || 'ページを開けませんでした。'); return; }
+    if (!S) { if (d.title) document.title = d.title; app.innerHTML = d.html; wire(); }
+    if (d.registered) { store('reg1027_' + K + '_' + PG, d.next || ''); markRegistered(d.next || ''); }
+    else if (REG !== null) { store('reg1027_' + K + '_' + PG, ''); try { localStorage.removeItem('reg1027_' + K + '_' + PG); } catch (e) {} app.querySelectorAll('form[data-optin]').forEach(function (f) { f.removeAttribute('data-reg'); f.querySelectorAll('label,button').forEach(function (x) { x.hidden = false; }); var bx = f.querySelector('[data-again]'); if (bx) bx.closest('div').remove(); }); }
+    var dl = app.querySelector('[data-deadline]');
+    if (dl && d.until) { dl.textContent = 'このページは ' + d.until + ' 24時まで見られます'; dl.hidden = false; }
+  }).catch(function () { if (!S) msg('ページを読み込めませんでした。少し時間をおいて、もう一度開いてください。'); });
+}
+
+// 10/12 登録済みの印（この端末だけ）。読めない端末でも動くように try で包む
+function store(key, val) {
+  try { if (val === undefined) return localStorage.getItem(key); localStorage.setItem(key, val); } catch (e) {}
+  return null;
+}
+// もう登録した人には入力欄を隠して「登録済み」を出す。アドレスを変えたい人のために、入力欄はリンクで戻せる
+function markRegistered(next) {
+  app.querySelectorAll('form[data-optin]').forEach(function (f) {
+    // 10/27 この端末に残っていた前の行き先（古いLP）より、サーバーの今の行き先を優先する
+    if (f.getAttribute('data-reg')) {
+      var old = f.querySelector('[data-next]');
+      if (old && next) old.setAttribute('href', next);
+      else if (old) old.parentNode.remove();
+      else if (next) {
+        var p = document.createElement('p'); p.className = 'c';
+        p.innerHTML = '<a class="btn" data-next href="' + next.replace(/"/g, '&quot;') + '">登録後のページを開く</a>';
+        f.querySelector('[data-again]').parentNode.before(p);
+      }
+      return;
+    }
+    f.setAttribute('data-reg', '1');
+    f.querySelectorAll('label,button').forEach(function (x) { x.hidden = true; });
+    f.querySelector('.done').hidden = true;
+    var box = document.createElement('div');
+    box.innerHTML = '<p class="done">登録は済んでいます。</p><p class="c" style="font-size:14px">57分の動画のご案内は、ご登録のアドレスに届きます。</p>' +
+      (next ? '<p class="c"><a class="btn" data-next href="' + next.replace(/"/g, '&quot;') + '">登録後のページを開く</a></p>' : '') +
+      '<p class="c" style="font-size:13px;margin:0"><a href="#" data-again>別のアドレスで登録し直す</a></p>';
+    f.appendChild(box);
+    box.querySelector('[data-again]').addEventListener('click', function (e) {
+      e.preventDefault(); box.remove();
+      f.querySelectorAll('label,button').forEach(function (x) { x.hidden = false; });
+    });
+  });
+}
+
+// 10/27 登録の印を 57分の動画用の新しいタグに替えた＝前の 'reg_' の印（古いLPへのボタン）は読まない
+// 特典ページ：各特典の見出しの下にサムネイル、いちばん上に「受け取れるもの」の一覧
+function giftThumbs() {
+  if (PG !== '特典' || app.querySelector('.gifts')) return;
+  // wire() はページの先頭から呼ばれるので、ここで持つ（外の var だとまだ空）
+  var GIFT = 'https://raw.githubusercontent.com/hirofum-i/drhiro-ig-assets/master/img/line/line_tokuten_';
+  // 10/28 STEP順に並べ替え・名前も変えた（大賀AI）＝番号でなく題の言葉で見つける。画像は表紙をそろえた版（画像/特典サムネ_1028）
+  var GIFTS = [['アンチエイジング', '1'], ['セルフチェック', '2'], ['スタートガイド', '3'], ['食材30選', '4'], ['栄養の摂り方', '5'], ['栄養不足タイプ', '6'], ['ロードマップ', '7']];
+  var list = [];
+  app.querySelectorAll('h2').forEach(function (h) {
+    var hit = GIFTS.find(function (g) { return h.textContent.indexOf(g[0]) >= 0; });
+    if (!hit) return;
+    var src = GIFT + hit[1] + '_20261028.jpg';
+    h.id = 'gift' + hit[1];
+    var vbox = h.nextElementSibling;
+    if (vbox && vbox.classList.contains('video') && vbox.querySelector('[data-yt]')) {
+      // 10/28 動画は YouTube の古いサムネの上に、表紙をそろえた絵をかぶせる（押すと再生）
+      var yid = vbox.querySelector('[data-yt]').id;
+      var pb = document.createElement('button'); pb.className = 'poster'; pb.type = 'button'; pb.setAttribute('aria-label', '再生する');
+      pb.innerHTML = '<img src="' + src + '" alt="">';
+      pb.addEventListener('click', function () { pb.remove(); var pl = YTP[yid]; if (pl && pl.playVideo) pl.playVideo(); });
+      vbox.appendChild(pb);
+    } else {
+      var img = document.createElement('img'); img.className = 'thumb'; img.src = src; img.alt = h.textContent; img.loading = 'lazy';
+      h.after(img);
+    }
+    list.push('<a href="#gift' + hit[1] + '"><img src="' + src + '" alt="">' + h.textContent.replace(/（.*?）/, '') + '</a>');
+  });
+  // 小さな「ひらく」の文字リンクを、押しやすいボタンに
+  app.querySelectorAll('a[data-link]').forEach(function (a) {
+    if (a.textContent.trim() !== 'ひらく') return;
+    a.className = 'btn'; a.textContent = '開いて受け取る';
+    if (a.parentNode.tagName === 'P') a.parentNode.className = 'c';
+  });
+  if (!list.length) return;
+  var box = document.createElement('div'); box.className = 'gifts';
+  box.innerHTML = '<b>このページで受け取れるもの（' + list.length + 'つ）</b><div class="g">' + list.join('') + '</div>';
+  var m = app.querySelector('main'); m.insertBefore(box, m.firstChild);
+}
+
+function wire() {
+  // 長い見出しは読点で折る（「エネルギー切／れしない体」のような変な折り返しを避ける）
+  app.querySelectorAll('h1').forEach(function (h) { if (h.textContent.length > 14 && h.innerHTML.indexOf('<br>') < 0) h.innerHTML = h.innerHTML.replace('、', '、<br>'); });
+  // 10/27 台帳の本文に [画像:説明](URL) と書くと、その場所に画像を出す（Apps Script を出し直さずに絵を入れるため）
+  app.querySelectorAll('a[data-link]').forEach(function (a) {
+    var m = a.textContent.match(/^画像[:：](.*)$/);
+    if (!m) return;
+    var img = document.createElement('img'); img.className = 'thumb'; img.src = a.getAttribute('href'); img.alt = m[1];
+    var p = a.parentNode; if (p.tagName === 'P' && p.textContent.trim() === a.textContent.trim()) p.replaceWith(img); else a.replaceWith(img);
+  });
+  giftThumbs();
+  app.querySelectorAll('[data-link]').forEach(function (a) {
+    a.setAttribute('target', '_blank');
+    a.addEventListener('click', function () { lg('リンクを押した', a.getAttribute('data-link')); });
+  });
+  var played = {}, ended = {};
+  app.querySelectorAll('video').forEach(function (v) {
+    v.addEventListener('play', function () { if (!played[v.id]) { played[v.id] = 1; lg('動画を再生', v.id); } });
+    v.addEventListener('ended', function () { if (!ended[v.id]) { ended[v.id] = 1; lg('動画を最後まで', v.id); } });
+  });
+  var yts = app.querySelectorAll('[data-yt]');
+  if (yts.length) {
+    window.onYouTubeIframeAPIReady = function () {
+      yts.forEach(function (el) {
+        YTP[el.id] = new YT.Player(el.id, { videoId: el.getAttribute('data-yt'), playerVars: { playsinline: 1, rel: 0 }, events: { onStateChange: function (ev) {
+          if (ev.data === 1 && !played[el.id]) { played[el.id] = 1; lg('動画を再生', el.id); }
+          if (ev.data === 0 && !ended[el.id]) { ended[el.id] = 1; lg('動画を最後まで', el.id); }
+        } } });
+      });
+    };
+    var s = document.createElement('script'); s.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(s);
+  }
+  app.querySelectorAll('form[data-optin]').forEach(function (f) {
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var em = f.querySelector('input[name=email]').value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) { alert('メールアドレスを確かめてください'); return; }
+      var b = f.querySelector('button'), label = b.textContent; b.disabled = true; b.textContent = '登録しています…';
+      fetch(EXEC, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ api: 'optin', k: K, pg: PG, email: em }) })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (!d.ok) throw new Error(d.message || 'ng');
+          store('reg1027_' + K + '_' + PG, d.next || '');
+          f.querySelectorAll('label,button').forEach(function (x) { x.hidden = true; });
+          f.querySelector('.done').hidden = false;
+          if (d.next) setTimeout(function () { location.href = d.next; }, 1800);
+        })
+        .catch(function (err) { b.disabled = false; b.textContent = label; alert(err && err.message && err.message !== 'ng' ? err.message : '登録できませんでした。もう一度押してください'); });
+    });
+  });
+  app.querySelectorAll('form[data-form]').forEach(function (f) {
+    f.removeAttribute('onsubmit');
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var a = []; f.querySelectorAll('textarea').forEach(function (t) { a.push(t.value); });
+      if (!a.join('').trim()) { alert('ひとことだけでも書いてください'); return; }
+      var b = f.querySelector('button'); b.disabled = true; b.textContent = '送っています…';
+      fetch(EXEC, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ api: 'form', k: K, pg: PG, form: f.getAttribute('data-form'), answers: a }) })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (!d.ok) throw new Error('ng');
+          f.querySelectorAll('label,button').forEach(function (x) { x.hidden = true; });
+          f.querySelector('.done').hidden = false;
+        })
+        .catch(function () { b.disabled = false; b.textContent = '送信する'; alert('送れませんでした。もう一度押してください'); });
+    });
+  });
+}
+</script>
+</body>
+</html>
